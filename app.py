@@ -5,8 +5,13 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Disable the stupid cache mechanis
 
 
 @app.route('/')
-def hello():
+def index():
     return render_template('index.html')
+
+
+@app.route('/login')
+def login():
+    return render_template('form.html')
 
 
 if __name__ == "__main__":
